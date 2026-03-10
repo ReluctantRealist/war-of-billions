@@ -27,4 +27,4 @@ The Two Core Resources, Matter and Energy, are divided into subcategories:
 
 - **Copy Master Factory**: This is mainly for colonizing other systems or as a backup for the player's starting SRF. Costs a lot of Exotic Matter, and takes about a hundred years with standard Keeper tech.
 
-- **Print SRF**: Fabricate a new SRF that is smaller and more specialized than the master SRF, 
+- **Print SRF**: Fabricate a new SRF that is smaller and more specialized than the master SRF,
