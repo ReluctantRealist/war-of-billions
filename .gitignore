@@ -1,0 +1,47 @@
+# ─── Java / Backend ───────────────────────────────────────────────
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+target/
+build/
+out/
+.gradle/
+.mvn/
+*.iml
+*.ipr
+*.iws
+.idea/
+hs_err_pid*
+
+# ─── Node / Frontend ──────────────────────────────────────────────
+node_modules/
+dist/
+.next/
+.cache/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.*
+!.env.example
+
+# ─── OS ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Editor ───────────────────────────────────────────────────────
+.vscode/settings.json
+.vscode/launch.json
+*.swp
+*.swo
+*~
+
+# ─── Secrets ──────────────────────────────────────────────────────
+*.pem
+*.key
+secrets/
