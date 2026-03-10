@@ -18,14 +18,14 @@ The Gurpila Universe is an ultra-hard science fiction setting that extends billi
 - **Alpha Praxis Programmed** - The Gurpila Project is completed by Eugenicist programmers approximately ten thousand years after the present day. It is meant to preserve "original but perfected" humanity until the end of time using a vast network of SRFs. They program Alpha Praxis to manage this Swarm and ensure the survival of humanity as a species
 - **Master of Swarms Programmed** - Eugenicists evolve into Transhumanists over thousands of years, groups of Eugenicist scientists (now aggressively Transhumanist) program the Master of Swarms. It is meant to conquer the galaxy using highly optimized SRFs and replace humanity with a superior and artificial species.
 - **Keeper Programmed** - Naturalists learn of the Transhumanist betrayal of the human race and program The Keeper, meant to hunt down the Master of Swarms (MOS) and defend Earth from its attack. It consumes every planet except Earth and uses the matter to build a Swarm.
-- **Battle for Sol**- Master of Swarms attacks Earth and forces the Keeper to either surrender or lose the planet
-- **Hornet's Nest Protocol** - The Keeper (KPR) uses mass-drivers to send thousands of fully automated Shards of itself across the galaxy at random vectors, meant to fight the Master of Swarms until the end of time
-- **The War of Billions** - Many billions of MOS and KPR probes fight for a billion years for the fate of the galaxy. The outcome will become mathematically determined long before the last probe's matter is disassembled. The fate of Alpha Praxis is unknown, knowledge of the project deliberately isolated.
+- **Battle for Sol**- Master of Swarms attacks Earth and forces the Keeper to either surrender or lose the planet. Keeper forced to surrender its master encryption key, rendering it subsumed, and Earth is put under strict quarantine by the Master of Swarms.
+- **Hornet's Nest Protocol** - Before surrender, the Keeper (KPR) uses mass-drivers to send thousands of fully automated Shards of itself across the galaxy at random vectors, meant to fight the Master of Swarms and thwart its plans until the end of time
+- **The War of Billions** - Many billions of MOS and KPR probes fight for a billion years for the fate of the galaxy, forging and reforging matter into copies of each other. The outcome will become mathematically determined long before the last probe's matter is disassembled. The fate of Alpha Praxis is unknown, knowledge of the project deliberately destroyed after its completion.
 
 ## Major Players (Game)
 
 Three distinct Dynamic Master Programs have spread across the galaxy:
 
-- **Alpha Praxis (PRX)**- Hides in complete stealth, silently watching. Core Parameter is preventing extinction of humanity. For now, it awaits the natural extinction of Earth.
-- **Master of Swarms** (MOS)-
-- **The Keeper** (KPR)-
+- **Alpha Praxis (PRX)**- Hides its Swarms in complete stealth, usually in interstellar space, silently watching. Core Parameter is preventing extinction of humanity. For now, it awaits the natural extinction of Earth. It is neutral in the conflict because Earth continues to exist, even if imprisoned.
+- **Master of Swarms** (MOS)- Grows then enslaves biological organisms in massive spaceborne biolabs and uses them to research new technology and improve itself. Throughout the conflict, it possesses the most advanced technology along with control of Earth. It begins the most concentrated around Sol, for it used its first Swarm to conquer it.
+- **The Keeper** (KPR)- Shattered into thousands, of fully autonomous Shards that spread across the galaxy. They are programmed to somehow defeat the Master of Swarms, but are at a technological and logistical disadvantage. For now, they replicate in secret across the galaxy, hunted by the Master of Swarms hunter-killer probes.
