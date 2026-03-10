@@ -34,3 +34,35 @@ MOS presence in a system is determined by seed but treated as pre-existing histo
 ### Save File Scope
 
 Only Active systems are written to the save file. Dormant systems are pure seed — they cost nothing. This means save file size scales with player activity, not galaxy size, and remains manageable even in late game.
+
+## Tick System
+
+The simulation advances in discrete ticks. One tick equals one in-game year.
+
+The player controls the CDL (Core Directive Loop) — the oversight program the Shard runs to monitor and manipulate its Swarm. The CDL's refresh rate determines how many ticks pass per real-time update.
+
+| CDL Rate | Ticks per advance | Use case |
+| --- | --- | --- |
+| 1x | 1 year | Active management, crisis response |
+| 10x | 10 years | Routine operations |
+| 50x | 50 years | Long transits, early expansion |
+| 100x | 100 years | Idle growth, waiting for probes |
+
+### CDL Suspension
+
+The player can fully suspend the CDL, allowing the Swarm to operate on autonomous programming without oversight. Narratively this represents the Shard choosing not to run its full cognitive simulation — saving Compute, but going blind.
+
+Incoming transmissions continue to queue during suspension regardless. Signals travel at light speed whether the CDL is running or not.
+
+#### Wake-On Parameters
+
+Before suspending, the player configures conditions that will automatically resume the CDL. These are programmable and persistent:
+
+- **Hostile contact** — any `EVT_` transmission flagged as MOS activity (default: on)
+- **Incoming message** — any `MSG_` transmission received
+- **Resource threshold** — a stockpile drops below a set level (player-configurable per resource)
+- **Probe arrival** — a probe reaches its destination
+- **Build complete** — a queued SRF or structure finishes fabrication
+- **Timer** — resume after N years regardless of other conditions
+
+Waking after a long suspension delivers all queued transmissions at once, potentially revealing significant changes in the Swarm's situation. This is a deliberate design tension — the efficiency of going dark versus the risk of waking to a crisis.

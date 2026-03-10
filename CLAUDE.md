@@ -16,7 +16,7 @@ War Of Billions is a UI-heavy strategy/action game. This file contains instructi
 | Path               | Purpose                                      |
 |--------------------|----------------------------------------------|
 | `frontend/`        | React + TypeScript client (the whole game)   |
-| `docs/gdd/`        | Game Design Documents                        |
+| `docs/gdd/`        | Game Design Documents and Glossary of Terms  |
 | `docs/design/ui/`  | Excalidraw mockups + exported images         |
 | `docs/design/systems/` | Game system design docs (.md)           |
 | `docs/lore/`       | Story, factions, world-building              |

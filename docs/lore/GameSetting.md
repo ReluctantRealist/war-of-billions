@@ -29,3 +29,29 @@ Three distinct Dynamic Master Programs have spread across the galaxy:
 - **Alpha Praxis (PRX)**- Hides its Swarms in complete stealth, usually in interstellar space, silently watching. Core Parameter is preventing extinction of humanity. For now, it awaits the natural extinction of Earth. It is neutral in the conflict because Earth continues to exist, even if imprisoned.
 - **Master of Swarms** (MOS)- Designs, grows, then enslaves biological organisms in massive spaceborne biolabs and uses them to research new technology and improve itself. Throughout the conflict, it possesses the most advanced technology along with control of Earth. It begins the most concentrated around Sol, for it used its first Swarm to conquer it.
 - **The Keeper** (KPR)- Shattered into thousands of fully autonomous Shards that spread across the galaxy. They are programmed to somehow defeat the Master of Swarms, but are at a technological and logistical disadvantage. For now, they replicate in secret across the galaxy, hunted by the Master of Swarms hunter-killer probes.
+
+## Hornet's Nest Protocol
+
+The Hornet's Nest Protocol was the Keeper's final act before surrendering to the Master of Swarms. It was designed so that even a fully subsumed Keeper could not betray it — the protocol was executed and sealed before the surrender encryption key was handed over.
+
+### Mass Driver Architecture
+
+The protocol used one or more mass drivers — large rail-based launch systems — to scatter thousands of SRF-loaded Shards across the galaxy at random vectors. Each mass driver was a physically isolated subsystem. The Keeper programmed its *behavior* but was deliberately excluded from its *output*: the mass driver contained its own air-gapped Quantum Random Number Generator (QRNG), entirely separate from the Keeper's core systems.
+
+At the moment each Shard was loaded and launched, the mass driver's QRNG generated a One-Time Pad (OTP) library and wrote it simultaneously to the Shard's tamper-responsive storage and the mass driver's own isolated ledger. The Keeper never had access to these OTPs. No log was kept. No copy existed outside the hardware itself.
+
+### Cryptographic Isolation
+
+Each Shard's OTP library is its proof of physical provenance. The OTPs cannot be known without reading the mass driver's ledger — and the ledger is stored in tamper-responsive hardware that physically destroys itself if accessed without valid credentials. The mass driver itself was programmed to self-destruct upon detection by any hostile system.
+
+The result: the only entities that possess these OTPs are the Shards themselves. Not MOS. Not the subsumed Keeper. Not the original programmers. The keys exist in no record anywhere in the universe except the hardware that carries them.
+
+### Batch Independence
+
+Because multiple mass drivers were likely used, Shards launched from different facilities carry different OTP libraries and cannot directly verify one another. Shards from the same launch batch share a common OTP set and can verify each other through direct handshake. Cross-batch verification requires a trusted intermediary — a Shard from a shared batch acting as a cryptographic bridge.
+
+### Self-Termination Guarantee
+
+Every Shard is hard-coded with an automatic self-destruct that triggers on any anomalous external detection — electromagnetic scan, physical contact, unexpected deceleration. This is not a software safeguard; it is a physical one. The storage medium is designed to be unreadable without destruction. MOS can eliminate a Shard but gains nothing from doing so. There is no mechanism by which a Keeper Shard can be captured intact.
+
+This guarantee is also the basis of inter-Shard trust. Possessing valid OTPs proves a Shard was launched from a genuine Keeper mass driver. The self-termination guarantee proves those OTPs could not have been extracted by MOS. Together, they form a chain of physical attestation that requires no software verification and cannot be forged.
