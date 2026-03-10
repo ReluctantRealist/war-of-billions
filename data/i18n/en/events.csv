@@ -1,0 +1,6 @@
+key,text
+EVT_probe_signal_detected,"Encrypted signal detected — strength {strength}, bearing {direction}"
+EVT_probe_self_destruct,Probe self-destructed. No trace recovered.
+EVT_probe_traced,The signal has been traced. Origin exposed.
+EVT_region_discovered,New region discovered: {region_name}
+EVT_fleet_engaged,"Hostile fleet engaged at {location}. Strength: {strength}"

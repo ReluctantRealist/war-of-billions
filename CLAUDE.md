@@ -6,8 +6,7 @@ War Of Billions is a UI-heavy strategy/action game. This file contains instructi
 
 ## Tech Stack
 
-- **Backend:** Java (Spring Boot)
-- **Frontend:** React + TypeScript
+- **Frontend:** React + TypeScript (no backend — all logic runs client-side)
 - **Docs:** Markdown (all documentation must be `.md`)
 - **Data:** CSV for balance spreadsheets and translation tables
 - **UI Design:** Excalidraw (`.excalidraw` files live in `docs/design/ui/`)
@@ -16,8 +15,7 @@ War Of Billions is a UI-heavy strategy/action game. This file contains instructi
 
 | Path               | Purpose                                      |
 |--------------------|----------------------------------------------|
-| `backend/`         | Java Spring Boot server code                 |
-| `frontend/`        | React + TypeScript client                    |
+| `frontend/`        | React + TypeScript client (the whole game)   |
 | `docs/gdd/`        | Game Design Documents                        |
 | `docs/design/ui/`  | Excalidraw mockups + exported images         |
 | `docs/design/systems/` | Game system design docs (.md)           |
@@ -32,7 +30,7 @@ War Of Billions is a UI-heavy strategy/action game. This file contains instructi
 - Translation/localisation tables live in `data/i18n/` as `.csv` files.
 - Excalidraw UI mockups (`.excalidraw`) are stored alongside exported `.png` or `.svg` in `docs/design/ui/`.
 - Frontend is UI-heavy — prioritise component clarity and typed props.
-- Backend is Java — follow standard Spring Boot project conventions.
+- No backend. All game state, logic, and procedural generation runs in the browser.
 
 ## Notes
 

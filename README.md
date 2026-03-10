@@ -1,6 +1,6 @@
 # War Of Billions
 
-A large-scale strategy/action game built with Java (backend) and React + TypeScript (frontend).
+A large-scale single-player space strategy game built with React + TypeScript. No backend — all logic runs client-side.
 
 ## Project Status
 
@@ -10,7 +10,6 @@ Early development.
 
 | Layer    | Technology             |
 |----------|------------------------|
-| Backend  | Java (Spring Boot)     |
 | Frontend | React + TypeScript     |
 | Docs     | Markdown + Excalidraw  |
 | Data     | CSV (balance / i18n)   |
@@ -19,8 +18,7 @@ Early development.
 
 ```
 war-of-billions/
-├── backend/          # Java Spring Boot server
-├── frontend/         # React + TypeScript client
+├── frontend/         # React + TypeScript (the whole game)
 ├── docs/
 │   ├── gdd/          # Game Design Documents
 │   ├── design/

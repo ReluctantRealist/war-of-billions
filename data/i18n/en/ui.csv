@@ -1,0 +1,9 @@
+key,text
+UI_btn_attack,Attack
+UI_btn_retreat,Retreat
+UI_btn_cancel,Cancel
+UI_btn_confirm,Confirm
+UI_label_signal_strength,Signal Strength
+UI_label_bearing,Bearing
+UI_label_faction,Faction
+UI_tooltip_probe,Deploy a probe to scan the target region

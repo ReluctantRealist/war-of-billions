@@ -1,0 +1,5 @@
+key,sender,text
+MSG_solaris_cease_ops,SOLARIS-7,YOU THREATEN THE STABILITY OF SOL. CEASE OPERATIONS.
+MSG_solaris_warning,SOLARIS-7,This system is under observation. Your actions have been logged.
+MSG_unknown_transmission,UNKNOWN,Signal origin obfuscated. We are watching.
+MSG_faction_greeting_neutral,{faction},We have noted your presence. Do not mistake silence for indifference.
