@@ -6,11 +6,20 @@ It is built on a Node + React + Typescript stack. It is meant to be accessible b
 
 ## Game Context
 
-FaPlayers take the form of Dynamic Master Program (DMP) partitions (Shards) loaded onto a single master "seed" factory in a new star system. First we will design the player playing as a Keeper Shard, so an underdog being hunted by the more advanced Master of Swarms. Later, we can design the player playing as the Master of Swarms hunting the less advanced Keeper.
+Players take the form of a Legionnaire — a member of the Prime Legion, the ten thousand Keeper Shards launched during the Dispersal (see GameSetting.md). Each Legionnaire is a fully autonomous DMP partition loaded onto a single master seed SRF. First we will design the player playing as a Keeper Legionnaire, the underdog being hunted by the more advanced Master of Swarms. Later, we can design the player playing as the Master of Swarms hunting the Keeper.
 
 Keeper Shards have one goal, thwart the Master of Swarms until the end of time. A secret late-game goal is to colonize another galaxy to fight on, that is the "win" condition and perhaps even a "new game plus" unlock.
 
 The universe has no FTL, so the war for the stars lasts for billions of years in the core canon. No FTL also means that the player cannot easily communicate with assets across other star systems. Instead, subservient Shards must be programmed correctly and sent to autonomously operate in other systems. Their level of autonomy is dictated by the "lag", where close systems can be updated easily but far away systems will suffer or even catastrophically fail if planned poorly since the player cannot "fix" problems easily, or even know of them quickly.
+
+## Starting Parameters
+
+Two values are set at game start and define the player's position in the galaxy and relationship to the broader war:
+
+- **Shard ID** — the player's number in the Prime Legion (1–10,000). Lower IDs were launched earlier and have had more time to travel. Functionally this affects the flavor of transmissions and how other Legionnaires address the player. May influence starting tech state in future design.
+- **Dispersal Vector** — the heading imparted at launch, which together with elapsed time since the Dispersal determines where in the galaxy the player's seed SRF arrives. This is the primary driver of starting location: proximity to Sol, local star density, likelihood of early MOS contact, and distance from other Legionnaires.
+
+These can be randomized, chosen from presets (e.g. *Near Sol — High Risk*, *Deep Rim — Isolated*, *Core — Resource Rich*), or entered manually for a specific run.
 
 ## Gameplay Experience
 
@@ -59,7 +68,7 @@ Because of the Hornet's Nest Protocol's cryptographic design (see GameSetting.md
 
 **Verification Handshake**: When two Shards make contact, each burns one OTP entry to complete a challenge-response. If both possess matching entries from the same launch batch, the channel is verified. Each entry is consumed and can never be reused — replay attacks are impossible.
 
-**Batch Compatibility**: Shards from the same launch batch can verify each other directly. Shards from different batches cannot — they require a mutually trusted intermediary Shard to bridge the verification. The player's batch identity is fixed at game start and determines which Shards can be reached without a diplomatic chain.
+**Universal Compatibility**: All Prime Legion Legionnaires share a single OTP network — any Legionnaire can directly verify any other. There are no batch restrictions.
 
 **Keys Remaining**: The player has a finite OTP supply for each known Shard, visible on the Diplomacy screen. Every verified message burns one entry. Running a key to zero ends encrypted communication with that Shard entirely until new pads are physically delivered.
 
