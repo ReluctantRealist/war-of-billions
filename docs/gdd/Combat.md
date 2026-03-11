@@ -1,8 +1,14 @@
 # Combat
 
-Combat in War of Billions has no micromanagement. The player never issues a live order during an engagement. Instead, combat outcomes are determined by the Swarm's pre-built infrastructure, loaded NRA loadouts, and standing autonomous directives — set long before MOS arrives. Preparation is the gameplay. The battle itself is the result.
+Latency determines agency. The player's ability to intervene in a battle is directly proportional to their physical proximity to it. In the home system, the CDL is present — orders are instantaneous, responses are live. In a remote system, every command is light-speed-bound and may arrive centuries after the battle ends. The same attack vector plays out differently depending on where it lands.
 
-This is deliberate. A star system 500 light-years away cannot receive a command in time to act on it. The player who wins is the one who anticipated the attack type and invested accordingly.
+## MOS Combat Advantage
+
+MOS does not win fights with a single superior weapon. It wins because its logistics are fractionally more efficient, its transit routes fractionally more accurate, and its predictive modeling centuries ahead of what a Legionnaire can compute. A four-percent efficiency gap in propulsion or heat dissipation is imperceptible in a single engagement. Compounded across a Swarm of billions operating over millions of years, it becomes an insurmountable logistical lead. See [GameSetting.md](../lore/GameSetting.md) for the full context of the technological asymmetry.
+
+The player's defense against being predicted is the same as their defense against being found: stay dark, stay irregular, and never let MOS observe enough of the Swarm to model the rest.
+
+---
 
 ## Attack Likelihood
 
@@ -51,9 +57,15 @@ MOS uses three distinct attack vectors, escalating in cost, commitment, and perm
 
 ---
 
-## No Live Orders Across Systems
+## Home System Combat
 
-Once an attack is in progress, the player cannot intervene directly. The Swarm executes its standing combat directives autonomously. The player watches the engagement unfold through delayed transmissions — the battle may already be over by the time they learn it started.
+*[To be designed. The player has live CDL access and can issue direct orders during an engagement. This section will cover what orders are available, at what CDL tick rate, and what remains outside the player's control even at home.]*
+
+---
+
+## Remote System Combat
+
+Once an attack is in progress at a remote system, the player cannot intervene directly. The Swarm executes its standing combat directives autonomously. The player watches the engagement unfold through delayed transmissions — the battle may already be over by the time they learn it started.
 
 The player's influence is entirely in the preparation:
 

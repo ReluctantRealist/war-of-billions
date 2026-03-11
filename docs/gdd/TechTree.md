@@ -4,6 +4,14 @@ Research in War of Billions is divided into two branches mirroring the game's co
 
 ---
 
+## MOS Research Advantage
+
+The player is not competing on equal footing. MOS generates Quantum Compute through spaceborne biolab research programs that have been running since before the Dispersal. Its asymptotic curves are further along than any Legionnaire can reach through purely mechanical research. The player's research ceiling is lower. This is not a temporary disadvantage — it is the permanent condition of the war. See [GameSetting.md](../lore/GameSetting.md) for the lore context.
+
+The player's viable strategy is not to match MOS research-for-research, but to identify which specific parameters matter most for their current situation and invest there — accepting inferiority everywhere else.
+
+---
+
 ## Core Philosophy: Asymptotic Progression
 
 Every researchable parameter has a physical ceiling. Heat dissipation cannot exceed what thermodynamics allows. Propulsion cannot exceed the speed of light. Transit stealth cannot reach zero emissions while an engine is burning.

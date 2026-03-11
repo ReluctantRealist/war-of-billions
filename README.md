@@ -8,11 +8,14 @@ Early development.
 
 ## Tech Stack
 
-| Layer    | Technology             |
-|----------|------------------------|
-| Frontend | React + TypeScript     |
-| Docs     | Markdown + Excalidraw  |
-| Data     | CSV (balance / i18n)   |
+| Layer      | Technology                        |
+|------------|-----------------------------------|
+| Frontend   | React + TypeScript                |
+| Shell      | Electron (native desktop exe)     |
+| Simulation | Node.js worker_threads            |
+| Saves      | pako-compressed JSON to disk      |
+| Docs       | Markdown + Excalidraw             |
+| Data       | CSV (balance / i18n)              |
 
 ## Repository Structure
 

@@ -2,7 +2,7 @@
 
 War of Billions is a single-player far-future space management game where the player manages an exponentially growing network of self-replicating, automated factories, with the goal of spreading across star systems and dominating the galaxy.
 
-It is built on a Node + React + Typescript stack. It is meant to be accessible both through GitHub along with itch.io, with Steam release on 1.0
+It is built on a React + TypeScript frontend wrapped in **Electron**, shipping as a native desktop executable on itch.io and Steam. All simulation runs locally on the player's hardware — no backend, no server. See [TechnicalDesign.md](../design/systems/TechnicalDesign.md) for the simulation architecture.
 
 ## Game Context
 
@@ -85,3 +85,17 @@ The player tracks an **OTP Budget** per known Legionnaire — measured in data v
 **Vassalization** allows the player to subsume an independent Legionnaire's Swarm under their CDL. The target runs a cold cost-benefit analysis across four criteria (latency, Compute overhead, Threat Vector, and relative performance) and will reject if any single one fails.
 
 See [Diplomacy.md](Diplomacy.md) for full mechanics.
+
+---
+
+## Strategic Asymmetry
+
+War of Billions is a game the player is not supposed to be able to win through raw efficiency. MOS is better — at almost everything, by design. Understanding why, and designing play around it rather than against it, is the core strategic challenge.
+
+**The research gap is permanent.** MOS uses enslaved biological organisms in spaceborne biolabs to generate Quantum Compute at a rate no mechanical Keeper Shard can match. Because all research is logarithmic, both sides hit diminishing returns — but MOS started climbing those curves long before the Dispersal. The player will always be behind on the asymptote. The goal is not to catch up; it is to find the specific parameters where being ninety-five percent as good as MOS is good enough, and to survive on that margin.
+
+**The management burden is a weapon MOS uses against the player.** The Keeper was not designed for galactic empire. As the player's Swarm grows and vassalizations compound, the CDL's Compute overhead grows with it. A poorly managed expansion will consume the player from within before MOS fires a single shot.
+
+**MOS predicts. The player must be unpredictable.** MOS does not just respond to the player's current state — it models future states. Stealth is not just about hiding what you are; it is about hiding what you are becoming. A Swarm MOS cannot observe cannot be pre-empted.
+
+See [GameSetting.md](../lore/GameSetting.md) for the full lore context of the technological gap.
