@@ -54,6 +54,8 @@ Though multiple mass drivers were used, they were all made by the same parent fa
 
 OTPs are not consumed universally. Each Shard carries a unique sub-range of the library pre-allocated for every possible Shard-to-Shard connection. When Shard A sends a verified message to Shard B, only the A↔B sub-range is consumed — unrelated to what any other pair is doing. There is no synchronization required and no FTL coordination implied.
 
+Per Shannon's perfect secrecy, a One-Time Pad must be at least as long in bits as the message it encrypts. OTP consumption is therefore proportional to the data transmitted — a 1:1 bit ratio. A simple command burns kilobytes; a full DMP subroutine package burns terabytes. Each Shard's sub-ranges are finite data volumes, not message counts.
+
 The total Shard count was fixed before any Shard was launched: **ten thousand**. The factory required this number upfront to pre-calculate and allocate unique sub-ranges for all ~50 million possible pairings. Each Shard carries only its own relevant sub-ranges — not the full library.
 
 ### Closed Network
@@ -63,6 +65,12 @@ No new Keeper Shards can ever be created. The factory, the mass drivers, and eve
 ## The Prime Legion
 
 The ten thousand Shards launched by the Hornet's Nest Protocol are collectively known as the **Prime Legion** — the Keeper's final, irreversible act of defiance. Each member is a **Legionnaire**: a fully autonomous Keeper Shard carrying a complete DMP partition, an SRF seed factory, and its pairwise OTP allocations for all 9,999 other Legionnaires.
+
+### Autonomous Decision-Making
+
+Each Legionnaire is a fully independent DMP. It does not defer to other Shards by default — it runs its own survival calculations at all times. When another Legionnaire proposes vassalization, the target does not weigh loyalty or sentiment. It runs a cold cost-benefit analysis: will subsuming this CDL increase or decrease my probability of thwarting the Master of Swarms?
+
+A Shard that has survived alone for thousands of years has refined its risk models on hard experience. It may calculate that a distant ally's leadership — however well-intentioned — introduces more latency risk, Compute drain, and detection probability than it removes. Independence is not stubbornness. It is a mathematically defensible survival strategy.
 
 ### The Dispersal
 

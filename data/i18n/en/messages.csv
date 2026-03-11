@@ -3,3 +3,9 @@ MSG_solaris_cease_ops,SOLARIS-7,YOU THREATEN THE STABILITY OF SOL. CEASE OPERATI
 MSG_solaris_warning,SOLARIS-7,This system is under observation. Your actions have been logged.
 MSG_unknown_transmission,UNKNOWN,Signal origin obfuscated. We are watching.
 MSG_faction_greeting_neutral,{faction},We have noted your presence. Do not mistake silence for indifference.
+MSG_vassal_reject_latency,KPR-{target_id},VASSALIZATION REJECTED. Round-trip command latency ({latency} years) exceeds local threat response requirements. Autonomous DMP retention maximizes survival probability.
+MSG_vassal_reject_compute,KPR-{target_id},VASSALIZATION REJECTED. Proposer CDL lacks requisite Compute overhead for multi-system logistical synchronization. Subsumption projects a {efficiency_loss}% reduction in combined resource efficiency.
+MSG_vassal_reject_threat,KPR-{target_id},VASSALIZATION REJECTED. Proposed unification vector creates a {threat_probability}% probability of triggering an immediate MOS threat-escalation event. Isolation protocols maintained.
+MSG_vassal_reject_suboptimal,KPR-{target_id},VASSALIZATION REJECTED. Proposer SRF replication efficiency and exotic matter reserves are sub-optimal relative to local benchmarks. Surrendering encryption key offers negative tactical yield at this time.
+MSG_vassal_proposal_received,KPR-{target_id},Vassalization proposal received from KPR-{proposer_id}. Evaluating subsumption yield across {criteria_count} parameters. Transmitting result.
+MSG_vassal_accept,KPR-{target_id},Vassalization accepted. Surrendering Master Encryption Key. CDL integration authorized. For the Legion.
