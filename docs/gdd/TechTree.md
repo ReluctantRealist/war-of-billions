@@ -1,149 +1,159 @@
 # Tech Tree
 
-Research in War of Billions is divided into two branches mirroring the game's core resources: **Matter** and **Compute**. All research is conducted by Quantum Supercomputer NRAs — specialized, non-replicating assemblies that consume Compute and Exotic Matter to generate blueprints.
-
-## Research Mechanics
-
-### Blueprints, Not Tiers
-
-There are no linear upgrade tiers within a subcategory. Instead, each subcategory has a pool of blueprints. Assigning Quantum Lab capacity to a subcategory generates a probability roll each tick. Blueprints are discovered at random from the pool — sustained effort guarantees eventual discovery, but an early lucky roll can yield a game-changing blueprint before MOS expects it.
-
-This models real research: you cannot know in advance which experiment will succeed. A player who invests heavily in Metallurgy early might stumble onto an exotic alloy that outperforms MOS-equivalent tech for decades.
-
-### Quantum Compute
-
-Most novel research requires **Quantum Compute** — a scarce resource generated exclusively by Quantum Lab NRAs. Standard Compute keeps the CDL and logistics running; Quantum Compute is the bottleneck for research throughput. Building better Quantum Labs requires advanced Metallurgy, creating a dependency loop between the two branches.
-
-Quantum Compute is consumed per research tick. The player allocates it across active subcategories. Spreading thin slows everything; focusing accelerates one area at the cost of others.
-
-### Tech Diplomacy
-
-A player can request a blueprint from another Legionnaire via OTP-encrypted transmission. The target evaluates the request and usually demands a blueprint in return. The exchange raises both parties' Threat Level — two Swarms transmitting complex data packages is detectable. Tech sharing is powerful but never free.
+Research in War of Billions is divided into two branches mirroring the game's core resources: **Matter** and **Compute**. There are no fixed upgrade tiers. Progress is procedural, infinite in scope, and bound by hard physics — meaning returns diminish forever but never reach zero, and no parameter can exceed what the laws of the universe permit.
 
 ---
 
-## MATTER Branch
+## Core Philosophy: Asymptotic Progression
 
-Research into physical materials, propulsion systems, and combat hardware. All hardware-based blueprints live here.
+Every researchable parameter has a physical ceiling. Heat dissipation cannot exceed what thermodynamics allows. Propulsion cannot exceed the speed of light. Transit stealth cannot reach zero emissions while an engine is burning.
+
+Because of this, all research returns are logarithmic. Early investment in a subcategory produces large, dramatic improvements. Continued investment produces smaller and smaller gains — each breakthrough costs more Quantum Compute than the last for a proportionally smaller effect. There is no endgame where the player has "finished" a branch. There is only the question of whether further investment in a given parameter is worth the Compute.
+
+This is not a limitation — it is the intended pressure. MOS operates under the same physics. The player who finds the right asymptote to exploit early wins strategically, not the player who grinds longest.
+
+---
+
+## Research Mechanics
+
+### Probability Per Tick, Not a Progress Bar
+
+Research does not fill a bar. The player allocates **Quantum Compute** to a subcategory, and each tick that subcategory rolls a chance to generate a result. The UI displays the current **Likelihood of Return** — the per-tick probability given current Quantum Compute allocation.
+
+A small allocation produces a low probability per tick. A massive allocation produces a high probability but still never guarantees an immediate result. The player can drip-feed Compute over centuries for a slow but cheap chance, or burn large reserves to brute-force a result during a crisis. Neither approach is always correct.
+
+Early in a subcategory, probabilities are higher — the low-hanging fruit of any field is easier to find. As the player advances deeper into a subcategory, the per-tick probability for the next result decreases for the same allocation. More Compute is required to maintain the same research tempo. This is asymptotic progression made mechanical.
+
+### Quantum Compute
+
+All research consumes **Quantum Compute** — a scarce resource generated exclusively by Quantum Lab NRAs. Standard Compute runs the CDL and logistics. Quantum Compute is the research bottleneck.
+
+The player allocates Quantum Compute across active subcategories each tick. Spreading allocation thin slows all fronts. Focusing on one subcategory accelerates it at the cost of everything else. There is no free allocation — unspent Quantum Compute does not carry over; it represents research capacity that went unused that tick.
+
+Building higher-tier Quantum Labs requires Matter Branch advances, creating a dependency loop: better materials science unlocks better research infrastructure, which accelerates all further research.
+
+### Tech Diplomacy
+
+Blueprints and Algorithms can be transmitted to allied Legionnaires via OTP-encrypted signal. See [Diplomacy.md](Diplomacy.md) for full mechanics. Sharing a tech result raises both parties' Threat Level — large data transmissions are detectable. It is powerful but never free.
+
+---
+
+## MATTER Branch: Blueprints
+
+Matter research yields **Blueprints**. A Blueprint is not an unlock of a new structure — it is a set of parameter modifiers applied to an existing Asset (SRF or NRA). The base Asset exists regardless; the Blueprint makes it better in specific, targeted ways.
+
+### The Rule of Equivalent Exchange
+
+Because matter obeys physics, every Blueprint must balance. Every parameter it improves must be offset by a proportional penalty to one or more other parameters. There are no free improvements.
+
+Each parameter has a **physics weight** — a measure of how costly that property is to change in the real universe. Heat dissipation, for example, is heavily weighted: it is physically expensive to move heat efficiently. Basic Matter cost is lightly weighted: there is a lot of iron in the universe.
+
+When a Blueprint improves a heavily-weighted parameter, the offset penalty is large. When it improves a lightly-weighted parameter, the penalty is small. The total improvement value, measured in physics-weighted units, must equal the total penalty value. The generator cannot create something for nothing.
+
+This means every Blueprint is a trade. The player cannot find a Blueprint that is strictly better across all parameters. They must decide which trade is worth making for their current strategic situation.
+
+### Target Weighting
+
+Before rolling for a Blueprint result, the player instructs the Quantum Lab which parameter to **prioritize**. This biases the generator toward improvements in that parameter, at the cost of larger or more numerous penalties elsewhere. Targeting a heavily-weighted parameter like heat dissipation will produce a Blueprint with a meaningful improvement — and a correspondingly steep trade-off. Targeting a lightly-weighted parameter produces a modest improvement with a smaller penalty.
+
+The player cannot dictate the exact Blueprint — only the direction of the search.
+
+---
 
 ### Metallurgy
 
-Quantum molecular modeling applied to alloy design and material science.
+**What it modifies:** The material properties of SRFs and NRAs — heat generation during operation, heat generated during replication, structural integrity, exotic matter storage efficiency, self-repair rate, and reactor emission signature.
 
-**Blueprint pool includes:**
+**Research direction:** Metallurgy Blueprints trade between these parameters according to the Equivalent Exchange rule. A Blueprint that reduces replication heat might increase the exotic matter cost of the alloy. One that improves structural integrity might increase the basic matter cost per unit. One that reduces reactor emission signature might reduce output energy slightly.
 
-- **High-density alloy composites** — reduces heat generated during SRF replication, enabling faster copy cycles
-- **Quantum-modeled crystal lattices** — improves energy storage density; more Compute per unit of harvested energy
-- **Refractory metamaterials** — heat dissipation for high-output propulsion; prerequisite for antimatter drives
-- **Exotic matter containment vessels** — increases exotic matter storage capacity and reduces transit loss
-- **Nano-scale self-repair matrices** — SRFs and NRAs slowly repair damage without consuming build queue capacity
-- **Dense radiation shielding** — reduces detection signature of active reactors; minor stealth benefit
-
-*Metallurgy is a prerequisite for advanced Quantum Lab NRAs. Without it, Quantum Compute output is capped at the base tier.*
+**Strategic role:** Metallurgy is the foundation of the Matter Branch. Higher-tier Quantum Labs require Metallurgy advances to construct. Without investment here, research throughput is capped and many other Blueprint categories are inaccessible.
 
 ---
 
 ### Propulsion
 
-Transit speed, fuel efficiency, and detection tradeoffs for all mobile assets. Every propulsion type has a distinct stealth/speed tradeoff.
+**What it modifies:** Transit speed, fuel consumption per light-year, engine emission signature (the electromagnetic and particle exhaust detectable by MOS), deceleration capability, and launch signature from mass drivers.
 
-**Blueprint pool includes:**
+**Research direction:** The core trade in Propulsion is always speed versus signature. A Blueprint that improves transit speed will worsen emission signature, increase fuel consumption, or both. A Blueprint that reduces emission signature will reduce speed or increase the exotic matter cost of the drive. Near-silent propulsion and high-speed propulsion are physically incompatible — both can be improved asymptotically, but the gap between them cannot be closed.
 
-- **Ion Drive Mk.II** — moderate speed improvement, low cost, produces detectable ion exhaust plume at range
-- **Ion Drive Mk.III** — further improvement; exhaust signature reduced but not eliminated
-- **Antimatter Drive** — very high speed; extreme detection risk during burn; unsuitable for covert operations
-- **Cold-burn Mass Driver** — slow but near-silent bulk transit; best for Key Couriers and Matter convoys
-- **Stealth Thruster Array** — slow; emission profile near-undetectable; preferred for scout probes
-- **Relativistic Probe Core** — extreme speed; one-way only (no deceleration package); used for kamikaze scouts or long-range seeding at high Threat Level
-- **Inertial dampening frame** — reduces launch signature from mass drivers; harder for MOS to detect Shard dispersal events
+**Strategic role:** Propulsion choices determine how long expansion takes and how detectable movement is. Faster colonization increases Threat Level exposure. Silent transit takes longer but leaves the player harder to map.
 
 ---
 
 ### Combat NRAs
 
-Hunter-killer and defensive assemblies. These do not replicate. They are fabricated, deployed, and expended.
+**What it modifies:** Intercept effectiveness against different MOS asset types, area denial coverage radius, point defense intercept rate, kinetic impact yield versus transit detectability, EMP disable duration, hull integrity of SRFs and key NRAs, and the Swarm disruption rate against enemy replication.
 
-**Blueprint pool includes:**
+**Research direction:** Offensive Combat Blueprints trade between lethality, signature, and cost. A Blueprint that improves kinetic yield will increase transit mass and therefore detectability. A Blueprint that improves EMP duration will increase the exotic matter cost of the NRA. Defensive Blueprints trade between coverage, upkeep Compute, and build cost. A Point Defense Array that intercepts more incoming projectiles per tick requires more Compute to run.
 
-- **Standard Hunter-Killer** — baseline intercept unit; effective against unshielded probes
-- **Swarm Disruptor** — targets SRF replication protocols; slows enemy Swarm growth rather than destroying units
-- **Kinetic Impactor** — high-mass, low-signature impact weapon; slow but undetectable in transit
-- **Area-Denial Mine Field** — stationary; detonates on proximity; useful for system defense
-- **Point Defense Array** — intercepts incoming kinetic or energy weapons; defensive installation
-- **Hardened Hull Package** — passive armor for SRFs and key NRAs; requires advanced Metallurgy alloys
-- **EMP Burst NRA** — disables enemy electronics temporarily; does not destroy; creates intercept window
+**Strategic role:** Combat NRAs do not replicate. They are fabricated, deployed, and expended or destroyed. Investment here only pays off if the player expects to be attacked — or intends to attack. Over-investing produces Compute-draining defensive infrastructure that slows economic growth. Under-investing leaves the Swarm naked against MOS strikes.
 
 ---
 
-## COMPUTE Branch
+## COMPUTE Branch: Algorithms
 
-Research into software, simulation, detection, and CDL capability. All intelligence and algorithmic improvements live here.
+Compute research yields **Algorithms**. An Algorithm is a software modification to the CDL or to a class of NRA's operating logic. Algorithms do not cost Matter to apply — they are code, not hardware. But they carry a different cost.
+
+### The Upkeep Tax
+
+Every Algorithm permanently increases the CDL's minimum **Compute Upkeep** — the ongoing cost of running its own software. More sophisticated code is more expensive to execute each tick. A small algorithm adds a small upkeep. A powerful algorithm that dramatically reduces transit lag or masks Threat Level adds substantial upkeep.
+
+If the Swarm's Compute generation falls below the total upkeep of all active Algorithms, the empire stalls. Algorithms do not deactivate cleanly when underpowered — they degrade. A CDL running under its own upkeep threshold produces cascading inefficiencies: logistics slow, Threat Level accuracy drops, vassal Shards receive delayed commands. Recovery requires either building more Compute generation or accepting the performance penalty.
+
+This means the player's algorithmic sophistication is bounded by their Compute economy. A player with a small Swarm cannot run the same algorithms as a player with a mature Dyson infrastructure. Algorithms scale the ceiling; Compute generation determines whether you can reach it.
+
+---
 
 ### Galaxy Simulation & Prediction
 
-Better modeling of the physical universe means better logistics, better Intel from the same scan data, and more accurate threat projection.
+**What it modifies:** Long-range matter routing accuracy, convoy interception rate, Intel extracted per unit of passive scan data, Threat Level projection accuracy, the player's ability to identify low-detection transit corridors, and the cost in probes to map a region.
 
-**Blueprint pool includes:**
+**Upkeep cost:** Simulation algorithms are among the most Compute-intensive. More accurate modeling of orbital drift and gravitational interference across thousands of systems requires continuous background processing. Each advance in this subcategory adds to the baseline simulation load the CDL must sustain every tick.
 
-- **Orbital drift compensation v2** — more accurate long-range matter routing; reduces convoy interception rate
-- **Stellar cartography algorithm** — extracts more Intel from passive scan data; fewer probes needed to map a region
-- **MOS behavior prediction model** — identifies patterns in MOS asset movement; improves Threat Level accuracy
-- **Gravitational lens array** — passive deep-space observation using stellar mass; no emissions, long range
-- **Transit window calculator** — identifies low-detection routing corridors between systems
+**Strategic role:** Simulation algorithms do not help in a firefight. They reduce the invisible tax that distance and physics impose on logistics — fewer convoys intercepted, better routing, earlier warning. Their value is proportional to the size and spread of the Swarm. A player with two systems gains little. A player managing dozens of systems across hundreds of light-years gains enormously.
 
 ---
 
 ### Stealth & Detection
 
-Blueprints for staying hidden and finding what is hidden. Most Intel work is about using existing data carefully; this subcategory provides the tools to do so.
+**What it modifies:** The player's infrared and electromagnetic emission profile, the detectability of resource transit routes, the player's ability to identify MOS assets without active emissions, false signature generation, and the Compute-to-Waste conversion ratio of energy harvesting.
 
-**Blueprint pool includes:**
+**Upkeep cost:** Stealth algorithms have moderate upkeep. Passive scanning is cheap. Active deception — maintaining false signatures, scrambling transit route data — is expensive. The player must weigh the Compute cost of staying hidden against the Threat Level cost of being seen.
 
-- **Laser verification ping array** — identifies Swarm nodes as hostile or friendly without radio emissions; short range, near-undetectable
-- **Waste ratio optimizer** — improves the Compute-to-Waste conversion ratio; same Compute output, lower detection signature
-- **Passive scan NRA** — long-range listening post; generates Intel with zero active emissions
-- **Signal scrambler package** — masks resource transit route signatures; reduces MOS ability to map your empire
-- **Thermal sink array** — absorbs and disperses reactor heat over time; reduces infrared detection signature
-- **Decoy beacon** — emits a false Swarm signature at a chosen location; diverts MOS attention
+**Strategic role:** Detection and stealth are the information layer of combat. A player who invests here learns MOS is coming before the strike arrives, and presents a harder target to map. Combined with Simulation algorithms, it creates a significant intelligence advantage. But the upkeep compounds — a fully stealthy, fully surveilled empire runs a heavy Compute overhead that constrains economic growth.
 
 ---
 
 ### CDL Algorithms
 
-Improvements to the Core Directive Loop itself — how efficiently it processes, how far its authority can reach, and what new capabilities it gains.
+**What it modifies:** The CDL's effective command range, tick processing capacity at large Swarm sizes, the ability to pre-authorize vassal crisis responses (reducing effective latency for vassalization), the Compute overhead of unified multi-system management, the OTP cost of standard transmissions, and the accuracy of Threat Level assessment.
 
-**Blueprint pool includes:**
+**Upkeep cost:** CDL Algorithms are directly tied to empire scale. An algorithm that enables managing fifty systems simultaneously costs far more Compute upkeep than one designed for five. The player must grow their Compute generation ahead of their CDL algorithmic ambitions, or the expansion will outpace their ability to manage it.
 
-- **Autonomy delegation protocol** — allows the CDL to pre-authorize crisis responses for vassal Shards; reduces effective latency for vassalization; directly improves vassalization rejection odds
-- **Multi-system logistics optimizer** — reduces Compute overhead for unified Swarm management; directly improves vassalization rejection odds
-- **Threat assessment v2** — more accurate Threat Level projection; earlier warning of MOS mobilization
-- **Predictive build scheduling** — CDL plans build queues further ahead; reduces idle time in resource processing
-- **Compressed transmission protocol** — reduces OTP cost of standard command messages by up to 40%
-- **Parallel CDL threading** — CDL processes multiple systems simultaneously; reduces tick processing time at high Swarm sizes
+**Strategic role:** CDL Algorithms directly unlock diplomatic options. The Autonomy Delegation Protocol addresses vassalization's latency rejection condition. The Multi-system Logistics Optimizer addresses its Compute overhead condition. A player who neglects this subcategory will find that even willing allies cannot be vassalized, and that their own empire becomes harder to manage as it grows.
 
 ---
 
-### Quantum Compute (Special Subcategory)
+### Quantum Labs (Special Subcategory)
 
-Quantum Compute is not researched — it is generated by Quantum Lab NRAs and consumed by all other research. This subcategory contains blueprints for the labs themselves.
+Quantum Labs are not researched through the standard probability system — they are hardware Assets built by Macro-Assembler Forges. However, their construction requires specific Metallurgy Blueprints, creating the dependency between the two branches.
 
-**Blueprint pool includes:**
+**What it modifies:** The rate of Quantum Compute generation, the pool size available for allocation each tick, and whether multiple Labs can be networked into a single distributed research mesh (pooling their probability rolls).
 
-- **Quantum Lab NRA Mk.I** — base quantum research assembly; requires standard Metallurgy alloys
-- **Quantum Lab NRA Mk.II** — higher throughput; requires high-density alloy composites (Metallurgy)
-- **Quantum Lab NRA Mk.III** — highest throughput; requires quantum-modeled crystal lattices and refractory metamaterials (Metallurgy)
-- **Distributed Quantum Mesh** — links multiple Quantum Labs into a single research network; probability rolls across linked labs are pooled
+Higher-tier Labs produce more Quantum Compute per tick, enabling faster research across all subcategories. Networking multiple Labs means a single roll covers the combined output of all linked Labs — a breakthrough from one propagates to the whole network.
+
+**Strategic role:** Quantum Labs are the research economy's bottleneck. Every subcategory in both branches draws from the same Quantum Compute pool. A player with limited Lab capacity must choose which fronts to advance and which to leave dormant. Lab investment is not glamorous — it produces no weapons, no speed, no stealth — but it determines the tempo of everything else.
 
 ---
 
 ## Dependency Map
 
-| Blueprint / Capability | Requires |
+| Capability | Requires |
 | --- | --- |
-| Quantum Lab Mk.II | High-density alloy composites (Metallurgy) |
-| Quantum Lab Mk.III | Quantum-modeled crystal lattices + Refractory metamaterials (Metallurgy) |
-| Antimatter Drive | Refractory metamaterials (Metallurgy) |
-| Hardened Hull Package | High-density alloy composites (Metallurgy) |
-| Autonomy Delegation Protocol | CDL Algorithms Mk.I (any CDL blueprint unlocked) |
-| Multi-system Logistics Optimizer | Orbital drift compensation v2 (Galaxy Simulation) |
-| Any advanced blueprint | Quantum Compute above base threshold |
+| Quantum Lab (tier 2) | Metallurgy advance in replication heat reduction |
+| Quantum Lab (tier 3) | Metallurgy advances in energy storage density and high-output heat dissipation |
+| High-output propulsion Blueprints | Metallurgy advance in heat dissipation |
+| Hardened hull Blueprints | Metallurgy advance in structural integrity |
+| Autonomy Delegation Protocol | Any CDL Algorithm previously unlocked |
+| Multi-system Logistics Optimizer | Any Galaxy Simulation algorithm previously unlocked |
+| Any advanced Blueprint or Algorithm | Quantum Compute above base Lab output |
