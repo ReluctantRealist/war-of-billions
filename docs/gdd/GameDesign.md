@@ -134,3 +134,21 @@ War of Billions is a game the player is not supposed to be able to win through r
 **MOS predicts. The player must be unpredictable.** MOS does not just respond to the player's current state — it models future states. Stealth is not just about hiding what you are; it is about hiding what you are becoming. A Swarm MOS cannot observe cannot be pre-empted.
 
 See [GameSetting.md](../lore/GameSetting.md) for the full lore context of the technological gap.
+
+---
+
+## Emergent Gameplay
+
+The following is a target example of intended systems-based emergent play — showing how the game's mechanics should combine without scripting.
+
+### The Smash and Grab
+
+**Setup:** Use a Cold-burn Mass Driver to silently transit a Seed SRF into a resource-rich Dormant system. No detectable exhaust signature. MOS does not observe the launch.
+
+**Strip mine:** On Wake Event, the CDL queues Disposable Flux Harvesters and mining NRAs — Blueprints with high `Reclaim_Yield` and 1-tick `Disassembly_Time`. The system runs hot and loud. Threat Level climbs. This is intentional: the player is ringing the dinner bell.
+
+**The trap:** Decades before MOS Hunter-Killers arrive, the CDL triggers the Plasma Arc Crucible. All mining infrastructure melts in one tick. The recovered Basic Matter is immediately converted into Combat NRAs — Area-Denial Mine Fields and Point Defense Arrays seeded throughout the system.
+
+**The payoff:** MOS arrives expecting a vulnerable mining colony and flies into a prepared kill zone. Because no physical Key Courier or resource convoy was ever sent back to the home system, MOS has no signal chain to follow. It cannot link this system to the player's home Shard.
+
+**MOS counter-play:** If MOS detects the trap pattern before the Armada arrives, it deploys an Electromagnetic Suppression Array — see [Combat.md](Combat.md). The system goes dark. The local Shard fights on autonomous programming alone, and the player learns the outcome only when the jamming ends.

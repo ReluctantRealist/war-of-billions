@@ -35,6 +35,8 @@ MOS uses three distinct attack vectors, escalating in cost, commitment, and perm
 
 **What it attacks:** Logistics coordination between SRFs and NRAs. Replication scheduling. Matter routing. The Shard's ability to execute build queues. At high intensity, it can degrade the CDL's ability to receive its own transmissions from within the system.
 
+**Escalation — Electromagnetic Suppression:** If MOS assesses that a system is prepared for its arrival (trap pattern detected, unusually high Combat NRA density, suspicious Threat Level spike), it may escalate EW to full **Electromagnetic Suppression**. A dedicated EM Suppression Array floods the system with localized RF and laser noise tuned to the player's transmission frequencies. All `EVT_` and `MSG_` transmissions from that system stop arriving at the home CDL. The system goes completely dark on the player's UI. The local Shard's CDL cannot receive updates and fights entirely on its pre-programmed autonomous directives. The player does not know if the system survived until the suppression ends — which may be decades later.
+
 ---
 
 ### Kinetic Warfare

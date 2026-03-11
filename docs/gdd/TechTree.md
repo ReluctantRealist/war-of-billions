@@ -66,6 +66,10 @@ Before rolling for a Blueprint result, the player instructs the Quantum Lab whic
 
 The player cannot dictate the exact Blueprint — only the direction of the search.
 
+### Disposable Blueprint Type
+
+`Reclaim_Yield` and `Disassembly_Time` are valid target parameters for the Research Optimizer. Blueprints that prioritize these stats produce **Disposable NRAs** — assets optimized to be rapidly recovered rather than operated indefinitely. They trade operational performance (lower energy output, higher mass) for near-total material recovery in minimal ticks. Useful for strip-mine-and-retreat operations where the infrastructure will be deliberately demolished before MOS arrives. See [Infrastructure.md](Infrastructure.md) for full recycling mechanics.
+
 ---
 
 ### Metallurgy
