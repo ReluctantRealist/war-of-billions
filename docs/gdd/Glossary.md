@@ -14,4 +14,4 @@
 
 **Shard** - A partition of a DMP. One Shard per star system is the default configuration. Shards can be autonomous but will always obey updates from the parent Shard. Keeper Shards start fully independent because of the Hornet's Nest Protocol (see GameSetting.md).
 
-**CDL** - Core Directive Loop. The player is running this to refresh the UI and send new commands to the Swarm. 
+**CDL** - Core Directive Loop. The player is running this to refresh the UI and send new commands to the Swarm. Nothing is free, not even the gameplay itself.
