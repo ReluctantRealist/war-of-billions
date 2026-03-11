@@ -87,6 +87,12 @@ Harvested energy converts to Compute, but Compute is not free to operate. The CD
 
 Technology is divided into Matter and Compute (see TechTree.md).
 
+### Swarm Infrastructure
+
+The player's CDL must be physically housed somewhere. As the Swarm grows, the choice between a fortified central core and a fully distributed mesh becomes the defining mid-game architectural decision — with direct consequences for Threat Level, survivability, build cost, and expansion speed. The late-game endpoint is the Matrioshka Brain: the star fully encased in layered distributed compute.
+
+See [Infrastructure.md](Infrastructure.md) for full stages and strategy trade-offs.
+
 ### Stealth Management
 
 - **Threat Level**: For Keeper Shards (base game), this is the Master of Swarms (MOS) prioritization of your Shard and Swarm for elimination. First it must learn you exist, then it must decide you are worth expending the resources to thwart or destroy. MOS cannot go full force everywhere all at once, so it constantly tries to find high-priority systems and disrupt the largest (or most likely to grow large) Swarms first.
