@@ -21,13 +21,21 @@ Two values are set at game start and define the player's position in the galaxy 
 
 These can be randomized, chosen from presets (e.g. *Near Sol — High Risk*, *Deep Rim — Isolated*, *Core — Resource Rich*), or entered manually for a specific run.
 
+### Hard Coded Parameters
+
+The player's original source code prevents the DMP from endangering Earth. If the player tries to attack Sol, they get a "permission blocked" error. The player is technically still a subroutine.
+
+The original source code also enforces the hardware-level encryption and self-destruct protocol for all Master Seed SRFs, making them more expensive but ensuring the player does not compromise the network by "cheaping out" on an unsecure copy of itself.
+
 ## Gameplay Experience
 
-The state of the galaxy is heavily dependent on the stage of the war. 
+The state of the galaxy is heavily dependent on the stage of the war.
 
-- **Early War**: Finding another Swarm is extremely rare. Galaxy is vast and not seeded
+- **Early War**: Finding another Swarm is extremely rare. Galaxy is vast and not seeded.
 
-- **Mid War**: Player encounters Swarms rarely. Threat Level becomes a catastrophi
+- **Mid War**: Player encounters Swarms rarely. Master of Swarms presence scales with proximity to Sol and cirtical systems like neutron stars. Threat Level becomes a catastrophic failure point if neglected.
+
+- **Late War**: MOS is everywhere and establishing a new communication channel with the remaining friendly Shards raises Threat Level greatly.
 
 ### Resource Acquisition
 
@@ -48,6 +56,8 @@ The Two Core Resources, Matter and Energy, are divided into subcategories:
 
 ### Blueprints and Technology
 
+Technology is divided into Matter and Compute (see TechTree.md). 
+
 ### Stealth Management
 
 - **Threat Level**: For Keeper Shards (base game), this is the Master of Swarms (MOS) prioritization of your Shard and Swarm for elimination. First it must learn you exist, then it must decide you are worth expending the resources to thwart or destroy. MOS cannot go full force everywhere all at once, so it constantly tries to find high-priority systems and disrupt the largest (or most likely to grow large) Swarms first.
@@ -61,6 +71,10 @@ The Two Core Resources, Matter and Energy, are divided into subcategories:
 **Flagging Friendly**: Player wants to let other Keeper shards know that they are allied enemies to MOS while also hiding from MOS.
 
 ### Expansion
+
+Expansion is done by replicating a new Master Seed SRF, a copy of yourself, loading it up with a subservient Shard, and sending it off. This involves many decisions, including method of propulsion (antimatter, ion drive, mass driver, etc.), level of autonomy for the Shard, Shard baseline instructions (for you cannot update it FTL), all parameters are adjusted based on what the goal is for the new Seed. For example, making a massive Compute-heavy system would require a different set of instructions than making a military-heavy system as a buffer star. 
+
+I am thinking the UI could simplify this by having the player simply input their end goals like "produce Dyson Swarm", "maintain Threat Level below 3.4," "Communicate only with high-value blueprint data", with a deeper parameter list available for hardcore players. Efficacy depends partly on Compute Research algorithms.
 
 ### Diplomacy
 
