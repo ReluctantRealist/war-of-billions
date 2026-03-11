@@ -51,7 +51,7 @@ MOS uses three distinct attack vectors, escalating in cost, commitment, and perm
 
 ---
 
-## No Live Orders
+## No Live Orders Across Systems
 
 Once an attack is in progress, the player cannot intervene directly. The Swarm executes its standing combat directives autonomously. The player watches the engagement unfold through delayed transmissions — the battle may already be over by the time they learn it started.
 
