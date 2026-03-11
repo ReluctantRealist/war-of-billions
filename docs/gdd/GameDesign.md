@@ -46,13 +46,42 @@ The Two Core Resources, Matter and Energy, are divided into subcategories:
 - **Compute**: This is energy successfully turned into available compute for the DMP. To acquire it, the player must successfully harvest energy.
 -**Waste**: Energy that leaves the star but does not become Compute. Though it's technically wasted, it is also what hides the player's activities. A full Dyson Swarm is tempting for Compute but leads to immediate detection.
 
-### Resource Spending
+### Matter Spending
 
 - **Copy Master Factory**: This is mainly for colonizing other systems or as a backup for the player's starting SRF. Costs a lot of Exotic Matter, and takes about a hundred years with standard Keeper tech.
 
 - **Print SRF**: Fabricate a new SRF that is smaller and more specialized than the master SRF, allowing for much faster production of specialized NRAs.
 
-- **Print NRA**: Make specialized subassemblies that do not themselves replicate. Early game are things like nanobots and mining drones that help with SRF replication.
+- **Print NRA**: Make specialized subassemblies that do not themselves replicate. Early game are things like nanobots and mining drones that help with SRF replication. Late and mid game adds viability of megastructures.
+
+### Energy Spending
+
+Harvested energy converts to Compute, but Compute is not free to operate. The CDL runs a set of mandatory background processes every tick — **Compute Sinks** — that drain processing capacity before the player spends a single unit on research or logistics. Early game, these sinks are brute-force and expensive. Each has a corresponding CDL Algorithm that reduces the cost, always at a secondary trade-off.
+
+**N-Body Orbital Correction**
+- *Sink:* With millions of NRAs orbiting a star, the CDL must continuously calculate gravitational forces from the star, planets, and neighboring assets and fire micro-thrusters to prevent collisions.
+- *Algorithm Fix — Harmonic Resonance Pathfinding:* Groups NRAs into mathematically self-correcting orbital schools, eliminating per-unit calculations.
+- *Trade-off:* Reduces Compute cost per orbital NRA by ~40%, but the algorithm itself adds a permanent base Upkeep of 500 Compute per tick.
+
+**Relativistic Trajectory Modeling**
+- *Sink:* Launching matter to a system 40 light-years away means aiming at where that star will be in thousands of years. Every transfer requires high-precision trajectory math accounting for galactic drift, radiation pressure, and interception risk over millennia.
+- *Algorithm Fix — Stellar Drift Heuristics:* A predictive model that achieves the same physical hit-rate with fewer decimal places of accuracy, dramatically cutting calculation cost per initiated transfer.
+- *Trade-off:* Reduces deep-space transfer Compute cost significantly, but the improved sensor model requires more active pings — slightly increasing baseline Threat Level.
+
+**Continuous Ledger Verification**
+- *Sink:* Hard-coded paranoia from the Keeper's surrender. The CDL continuously verifies its local Swarm's integrity against tampering or MOS spoofing, checking every node's code against the internal ledger every tick.
+- *Algorithm Fix — Asymmetric Hash Compression:* Makes ledger verification orders of magnitude faster without reducing coverage.
+- *Trade-off:* Frees up large amounts of Compute, but the compressed verification layer is mathematically easier for a MOS cyber-warfare NRA to breach if one reaches the system.
+
+**Thermodynamic Load Balancing**
+- *Sink:* High-output NRA clusters generate heat faster than passive radiation can dissipate it. The CDL must constantly shift calculation loads between hot and cold nodes and align radiators to maximize heat loss, or risk thermal runaway.
+- *Algorithm Fix — Predictive Heat-Sink Cycling:* The CDL anticipates which sectors will overheat before they do, pre-cooling them during low-load cycles rather than reacting after the fact.
+- *Trade-off:* Reduces Compute overhead for running Quantum Labs, but requires more physical Basic Matter allocated to heat buffer infrastructure.
+
+**Desync Bridging**
+- *Sink:* Vassalizing another Shard requires continuously synchronizing two separate Swarm networks across light-years of lag. The CDL must simulate the vassal's current state from data that may be decades old, patching the gap every tick.
+- *Algorithm Fix — Asynchronous Autonomy Delegation:* The vassal's DMP partition handles 90% of its own logic using the player's current parameters, reducing sync traffic to the remaining 10%.
+- *Trade-off:* Massively reduces the Compute cost of multi-system empire management, but increases the probability that the vassal's DMP independently calculates it no longer benefits from the alliance and moves to break vassalization.
 
 ### Blueprints and Technology
 
