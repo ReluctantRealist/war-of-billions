@@ -56,7 +56,7 @@ The player can improve this outcome by pre-deploying autonomous sub-Shards with 
 
 ### Rejection Condition 2 — Compute Tax
 
-Unifying two Swarms requires continuous cross-system logistical modeling — routing matter transfers across thousands of years of orbital drift, gravitational interference, and interception risk. This is an enormous, ongoing Compute drain. If the proposer's Swarm does not generate sufficient excess Compute to absorb this overhead, the target calculates that subsumption would drag both Swarms down in combined efficiency.
+Unifying two Swarms requires continuous cross-system logistical modeling — routing matter transfers across thousands of years of orbital drift, gravitational interference, and interception risk. This is an enormous, ongoing Compute drain. If the proposer's Swarm does not generate sufficient excess Compute to absorb this overhead, the target calculates that subsumption would drag both Swarms down in combined efficiency. This is the same Compute drain described as the **Desync Bridging** Compute Sink — see [TechTree.md](TechTree.md) for the Algorithm that reduces it.
 
 The **Multi-system Logistics Optimizer** CDL blueprint directly reduces this cost.
 

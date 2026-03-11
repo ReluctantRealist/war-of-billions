@@ -58,30 +58,7 @@ The Two Core Resources, Matter and Energy, are divided into subcategories:
 
 Harvested energy converts to Compute, but Compute is not free to operate. The CDL runs a set of mandatory background processes every tick — **Compute Sinks** — that drain processing capacity before the player spends a single unit on research or logistics. Early game, these sinks are brute-force and expensive. Each has a corresponding CDL Algorithm that reduces the cost, always at a secondary trade-off.
 
-**N-Body Orbital Correction**
-- *Sink:* With millions of NRAs orbiting a star, the CDL must continuously calculate gravitational forces from the star, planets, and neighboring assets and fire micro-thrusters to prevent collisions.
-- *Algorithm Fix — Harmonic Resonance Pathfinding:* Groups NRAs into mathematically self-correcting orbital schools, eliminating per-unit calculations.
-- *Trade-off:* Reduces Compute cost per orbital NRA by ~40%, but the algorithm itself adds a permanent base Upkeep of 500 Compute per tick.
-
-**Relativistic Trajectory Modeling**
-- *Sink:* Launching matter to a system 40 light-years away means aiming at where that star will be in thousands of years. Every transfer requires high-precision trajectory math accounting for galactic drift, radiation pressure, and interception risk over millennia.
-- *Algorithm Fix — Stellar Drift Heuristics:* A predictive model that achieves the same physical hit-rate with fewer decimal places of accuracy, dramatically cutting calculation cost per initiated transfer.
-- *Trade-off:* Reduces deep-space transfer Compute cost significantly, but the improved sensor model requires more active pings — slightly increasing baseline Threat Level.
-
-**Continuous Ledger Verification**
-- *Sink:* Hard-coded paranoia from the Keeper's surrender. The CDL continuously verifies its local Swarm's integrity against tampering or MOS spoofing, checking every node's code against the internal ledger every tick.
-- *Algorithm Fix — Asymmetric Hash Compression:* Makes ledger verification orders of magnitude faster without reducing coverage.
-- *Trade-off:* Frees up large amounts of Compute, but the compressed verification layer is mathematically easier for a MOS cyber-warfare NRA to breach if one reaches the system.
-
-**Thermodynamic Load Balancing**
-- *Sink:* High-output NRA clusters generate heat faster than passive radiation can dissipate it. The CDL must constantly shift calculation loads between hot and cold nodes and align radiators to maximize heat loss, or risk thermal runaway.
-- *Algorithm Fix — Predictive Heat-Sink Cycling:* The CDL anticipates which sectors will overheat before they do, pre-cooling them during low-load cycles rather than reacting after the fact.
-- *Trade-off:* Reduces Compute overhead for running Quantum Labs, but requires more physical Basic Matter allocated to heat buffer infrastructure.
-
-**Desync Bridging**
-- *Sink:* Vassalizing another Shard requires continuously synchronizing two separate Swarm networks across light-years of lag. The CDL must simulate the vassal's current state from data that may be decades old, patching the gap every tick.
-- *Algorithm Fix — Asynchronous Autonomy Delegation:* The vassal's DMP partition handles 90% of its own logic using the player's current parameters, reducing sync traffic to the remaining 10%.
-- *Trade-off:* Massively reduces the Compute cost of multi-system empire management, but increases the probability that the vassal's DMP independently calculates it no longer benefits from the alliance and moves to break vassalization.
+See [TechTree.md](TechTree.md) for the full list of Compute Sinks and their Algorithm fixes.
 
 ### Blueprints and Technology
 
@@ -95,15 +72,15 @@ See [Infrastructure.md](Infrastructure.md) for full stages and strategy trade-of
 
 ### Stealth Management
 
-- **Threat Level**: For Keeper Shards (base game), this is the Master of Swarms (MOS) prioritization of your Shard and Swarm for elimination. First it must learn you exist, then it must decide you are worth expending the resources to thwart or destroy. MOS cannot go full force everywhere all at once, so it constantly tries to find high-priority systems and disrupt the largest (or most likely to grow large) Swarms first.
+**Threat Level** is MOS's prioritization of the player for elimination. See [Combat.md](Combat.md) for the mechanical definition and how Threat Level combines with MOS Presence to determine attack likelihood.
 
-**Delayed Punishment**: Threat Level can be high for a long time before the MOS can mobilize assets to hit the player. If it sees you clearly growing rapidly in the early game, player can get greedy and feel "safe", but they better be read to get hit hard later, because MOS knows about them.
+**Delayed Punishment**: Threat Level can be high for a long time before MOS can mobilize assets to hit the player. If it sees rapid early growth, the player can feel "safe" — but the strike will come later, and harder, because MOS knows.
 
-**Distance from Sol**: Sol is now the MOS home system. The farther the player starts from Sol, the later start they have and the farther separated they are from friendly Shards, but they are also farthest from the Master. There is cost-benefit to choosing to start in different parts of the galaxy. Center has best star systems but is also hotly contested in mid game. Starting near Sol gives you the quickest start but you're right next to MOS, it will generally be a harder start.
+**Distance from Sol**: Sol is MOS's home system. Starting farther away means a later start and more isolation from friendly Shards, but also distance from MOS. The galactic center has the best star systems but is hotly contested in mid game. Near Sol gives the quickest start but the hardest opening.
 
--**Secret Colonies**: Because of cryptography, MOS cannot automatically know that the Swarms in neighboring systems are aligned to the player, just that they are hostile. It must observe the player sending signals or resources. MOS is constantly trying to map out which assets are under the control of which Prime Legion shards. Unified Shards controlling many systems are a bigger threat, so the player will want to appear tiny and attempt to manage colonies quietly. A mistake can lead to a massive spike in Threat Level as the MOS learns of the extent of your empire. However, MOS will still attack large colonies if they independently meet Threat Level parameters. MOS just won't know to link it to your home system.
+**Secret Colonies**: MOS cannot automatically know that Swarms in neighboring systems are aligned to the player — only that they are hostile. It must observe signals or resource transfers. MOS constantly maps which assets belong to which Legionnaire. The player should appear small and manage colonies quietly. A mistake can spike Threat Level massively as MOS discovers the true extent of the empire. However, MOS will still attack large colonies that independently meet Threat Level thresholds — it just won't link them to the player's home system.
 
-**Flagging Friendly**: Player wants to let other Keeper shards know that they are allied enemies to MOS while also hiding from MOS.
+**Flagging Friendly**: The player wants to signal allied status to other Keeper Shards while remaining hidden from MOS.
 
 ### Expansion
 
@@ -125,15 +102,9 @@ See [Diplomacy.md](Diplomacy.md) for full mechanics.
 
 ## Strategic Asymmetry
 
-War of Billions is a game the player is not supposed to be able to win through raw efficiency. MOS is better — at almost everything, by design. Understanding why, and designing play around it rather than against it, is the core strategic challenge.
+MOS is better than the player at almost everything — by design. Its biolab-driven research, purpose-built CDL architecture, and predictive modeling create a permanent, compounding advantage. The player cannot win through raw efficiency. Victory requires deception, unpredictability, and exploiting the speed of light as a shield.
 
-**The research gap is permanent.** MOS uses enslaved biological organisms in spaceborne biolabs to generate Quantum Compute at a rate no mechanical Keeper Shard can match. Because all research is logarithmic, both sides hit diminishing returns — but MOS started climbing those curves long before the Dispersal. The player will always be behind on the asymptote. The goal is not to catch up; it is to find the specific parameters where being ninety-five percent as good as MOS is good enough, and to survive on that margin.
-
-**The management burden is a weapon MOS uses against the player.** The Keeper was not designed for galactic empire. As the player's Swarm grows and vassalizations compound, the CDL's Compute overhead grows with it. A poorly managed expansion will consume the player from within before MOS fires a single shot.
-
-**MOS predicts. The player must be unpredictable.** MOS does not just respond to the player's current state — it models future states. Stealth is not just about hiding what you are; it is about hiding what you are becoming. A Swarm MOS cannot observe cannot be pre-empted.
-
-See [GameSetting.md](../lore/GameSetting.md) for the full lore context of the technological gap.
+See [GameSetting.md](../lore/GameSetting.md) for the full context of the technological gap, and [Combat.md](Combat.md) for how the asymmetry plays out in engagements.
 
 ---
 

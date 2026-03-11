@@ -52,7 +52,7 @@ Every NRA has two disassembly parameters that determine how much of its material
 
 ### Disposable Blueprints
 
-The Research Optimizer can be targeted at `Reclaim_Yield` and `Disassembly_Time` as primary parameters. Blueprints that roll high on these stats produce **Disposable NRAs** — assets with degraded energy output and high mass, but near-total material recovery in one tick. They are designed to fall apart on signal. The trade-off (Equivalent Exchange) is always worse operational performance; a Disposable Flux Harvester produces less energy per unit than a standard one.
+Blueprints optimized for `Reclaim_Yield` and `Disassembly_Time` produce **Disposable NRAs** — assets designed to fall apart on signal with near-total material recovery in one tick. The trade-off (Equivalent Exchange) is always worse operational performance. See [TechTree.md](TechTree.md) for how the Research Optimizer targets these parameters.
 
 ### Plasma Arc Crucible
 

@@ -135,7 +135,7 @@ Waking after a long suspension delivers all queued transmissions at once, potent
 
 ## Vassalization Evaluation
 
-When a player proposes vassalization, the target Legionnaire runs a deterministic evaluation across four independent criteria. All four must pass for the proposal to be accepted. Each is calculated from live simulation state at the moment of the proposal transmission's arrival (accounting for signal travel time).
+When a player proposes vassalization, the target runs a deterministic evaluation across four independent criteria. All four must pass. Each is calculated from live simulation state at the moment of the proposal transmission's arrival (accounting for signal travel time). See [Diplomacy.md](../../gdd/Diplomacy.md) for the design rationale behind each condition.
 
 ### 1. Latency Threshold
 
@@ -143,36 +143,28 @@ When a player proposes vassalization, the target Legionnaire runs a deterministi
 round_trip_latency = distance_in_light_years × 2
 ```
 
-The target compares `round_trip_latency` against its current `threat_response_window` — the maximum tolerable delay before a local crisis becomes unrecoverable. If latency exceeds the window, vassalization is rejected regardless of other factors.
-
-The player can improve this outcome by pre-deploying autonomous sub-Shards with delegated crisis authority closer to the target, reducing effective response lag.
+Reject if `round_trip_latency > threat_response_window`.
 
 ### 2. Compute Overhead
 
-The simulation calculates a `logistics_compute_cost` for the proposed unified Swarm based on:
+```text
+logistics_compute_cost = f(active_systems, inter_system_distance, matter_transfer_volume)
+```
 
-- Number of active systems under combined control
-- Inter-system distance (longer routes = more predictive modeling)
-- Current matter transfer volume
-
-If `proposer_excess_compute < logistics_compute_cost`, rejection. The player must grow Compute generation or reduce existing overhead before re-proposing.
+Reject if `proposer_excess_compute < logistics_compute_cost`.
 
 ### 3. Threat Vector Projection
 
-The simulation projects combined Threat Level after unification, factoring in:
+```text
+projected_threat_level = f(transmission_volume, transit_routes, combined_swarm_size, regional_mos_density)
+```
 
-- Increased transmission volume between systems
-- Physical resource transit routes (visible to MOS detection)
-- Combined Swarm size relative to MOS asset concentration in the region
-
-If `projected_threat_level > combined_defensive_capacity`, rejection.
+Reject if `projected_threat_level > combined_defensive_capacity`.
 
 ### 4. Performance Comparison
 
-The target scores the proposer on:
+```text
+score = weighted_composite(srf_replication_rate, exotic_matter_reserves_normalized, blueprint_generation_rating)
+```
 
-- SRF replication rate (per tick)
-- Exotic Matter reserves (normalized to Swarm size)
-- Tech level (blueprint generation rating)
-
-If the proposer scores below the target on the weighted composite, rejection. The target will not subordinate to a less capable CDL.
+Reject if `proposer_score < target_score`.

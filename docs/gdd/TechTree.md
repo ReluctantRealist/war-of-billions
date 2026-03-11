@@ -142,7 +142,36 @@ This means the player's algorithmic sophistication is bounded by their Compute e
 
 **Upkeep cost:** CDL Algorithms are directly tied to empire scale. An algorithm that enables managing fifty systems simultaneously costs far more Compute upkeep than one designed for five. The player must grow their Compute generation ahead of their CDL algorithmic ambitions, or the expansion will outpace their ability to manage it.
 
-**Strategic role:** CDL Algorithms directly unlock diplomatic options. The Autonomy Delegation Protocol addresses vassalization's latency rejection condition. The Multi-system Logistics Optimizer addresses its Compute overhead condition. A player who neglects this subcategory will find that even willing allies cannot be vassalized, and that their own empire becomes harder to manage as it grows.
+**Strategic role:** CDL Algorithms directly unlock diplomatic options. The Autonomy Delegation Protocol addresses vassalization's latency rejection condition (see [Diplomacy.md](Diplomacy.md)). The Multi-system Logistics Optimizer addresses its Compute overhead condition. A player who neglects this subcategory will find that even willing allies cannot be vassalized, and that their own empire becomes harder to manage as it grows.
+
+#### Compute Sinks
+
+The CDL runs mandatory background processes every tick — **Compute Sinks** — that drain processing capacity before the player spends a single unit on research or logistics. Early game, these sinks are brute-force and expensive. Each has a corresponding CDL Algorithm that reduces the cost, always at a secondary trade-off.
+
+**N-Body Orbital Correction**
+- *Sink:* With millions of NRAs orbiting a star, the CDL must continuously calculate gravitational forces from the star, planets, and neighboring assets and fire micro-thrusters to prevent collisions.
+- *Algorithm Fix — Harmonic Resonance Pathfinding:* Groups NRAs into mathematically self-correcting orbital schools, eliminating per-unit calculations.
+- *Trade-off:* Reduces Compute cost per orbital NRA by ~40%, but the algorithm itself adds a permanent base Upkeep of 500 Compute per tick.
+
+**Relativistic Trajectory Modeling**
+- *Sink:* Launching matter to a system 40 light-years away means aiming at where that star will be in thousands of years. Every transfer requires high-precision trajectory math accounting for galactic drift, radiation pressure, and interception risk over millennia.
+- *Algorithm Fix — Stellar Drift Heuristics:* A predictive model that achieves the same physical hit-rate with fewer decimal places of accuracy, dramatically cutting calculation cost per initiated transfer.
+- *Trade-off:* Reduces deep-space transfer Compute cost significantly, but the improved sensor model requires more active pings — slightly increasing baseline Threat Level.
+
+**Continuous Ledger Verification**
+- *Sink:* Hard-coded paranoia from the Keeper's surrender. The CDL continuously verifies its local Swarm's integrity against tampering or MOS spoofing, checking every node's code against the internal ledger every tick.
+- *Algorithm Fix — Asymmetric Hash Compression:* Makes ledger verification orders of magnitude faster without reducing coverage.
+- *Trade-off:* Frees up large amounts of Compute, but the compressed verification layer is mathematically easier for a MOS cyber-warfare NRA to breach if one reaches the system.
+
+**Thermodynamic Load Balancing**
+- *Sink:* High-output NRA clusters generate heat faster than passive radiation can dissipate it. The CDL must constantly shift calculation loads between hot and cold nodes and align radiators to maximize heat loss, or risk thermal runaway.
+- *Algorithm Fix — Predictive Heat-Sink Cycling:* The CDL anticipates which sectors will overheat before they do, pre-cooling them during low-load cycles rather than reacting after the fact.
+- *Trade-off:* Reduces Compute overhead for running Quantum Labs, but requires more physical Basic Matter allocated to heat buffer infrastructure.
+
+**Desync Bridging**
+- *Sink:* Vassalizing another Shard requires continuously synchronizing two separate Swarm networks across light-years of lag. The CDL must simulate the vassal's current state from data that may be decades old, patching the gap every tick. This is the same Compute drain that drives Vassalization Rejection Condition 2 — see [Diplomacy.md](Diplomacy.md).
+- *Algorithm Fix — Asynchronous Autonomy Delegation:* The vassal's DMP partition handles 90% of its own logic using the player's current parameters, reducing sync traffic to the remaining 10%.
+- *Trade-off:* Massively reduces the Compute cost of multi-system empire management, but increases the probability that the vassal's DMP independently calculates it no longer benefits from the alliance and moves to break vassalization.
 
 ---
 
