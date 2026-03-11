@@ -22,6 +22,61 @@ This decision is driven by simulation scale. A late-game empire with dozens of a
 
 The React + TypeScript codebase is otherwise unchanged. Electron wraps it; it does not replace it.
 
+### Build Tooling: Electron Forge + Vite
+
+The project uses **Electron Forge** with the **Vite + TypeScript** template. Forge is the official Electron packaging tool — it handles bundling into platform-specific executables (`.dmg`, `.exe`, `.deb`) for itch.io and Steam distribution. Vite is the frontend build tool, replacing Webpack with fast hot-module replacement during development.
+
+Scaffold command: `npm init electron-app@latest war-of-billions -- --template=vite-typescript`
+
+### Process Architecture
+
+Electron runs three isolated contexts. They do not share memory or imports — all communication crosses explicit boundaries.
+
+```text
+┌─────────────────────────────────────────────────┐
+│  Main Process (Node.js)                         │
+│  - Spawns and manages the simulation worker     │
+│  - Handles file system (save/load via fs)       │
+│  - Owns the BrowserWindow lifecycle             │
+│                                                 │
+│  ┌───────────────────────────────────────────┐  │
+│  │  Simulation Worker (worker_threads)       │  │
+│  │  - Runs the tick loop                     │  │
+│  │  - Owns all game state                    │  │
+│  │  - Posts state snapshots to main process  │  │
+│  └───────────────────────────────────────────┘  │
+└────────────────┬────────────────────────────────┘
+                 │ IPC (contextBridge)
+┌────────────────┴────────────────────────────────┐
+│  Preload Script (preload.ts)                    │
+│  - Exposes a narrow API via contextBridge       │
+│  - Only bridge between Node and Renderer        │
+│  - React never imports Node APIs directly       │
+└────────────────┬────────────────────────────────┘
+                 │ window.api
+┌────────────────┴────────────────────────────────┐
+│  Renderer Process (React + TypeScript)          │
+│  - Renders state snapshots from the worker      │
+│  - Sends player commands through window.api     │
+│  - No access to fs, worker_threads, or Node     │
+└─────────────────────────────────────────────────┘
+```
+
+### Preload Bridge (preload.ts)
+
+The preload script uses `contextBridge.exposeInMainWorld` to create `window.api` — the only surface the React renderer can call. This is the CDL interface: React issues commands and receives state, but never runs simulation logic.
+
+Planned API surface:
+
+| Method | Direction | Purpose |
+| --- | --- | --- |
+| `sendCommand(cmd)` | Renderer → Main → Worker | Player issues a game command (build, research, expand, etc.) |
+| `onTickSnapshot(callback)` | Worker → Main → Renderer | Worker posts a state snapshot after each tick advance; React re-renders |
+| `setTickSpeed(rate)` | Renderer → Main → Worker | Change CDL rate (1x, 10x, 50x, 100x) or suspend |
+| `saveGame()` | Renderer → Main | Main process serializes worker state and writes to disk |
+| `loadGame(path)` | Renderer → Main → Worker | Main reads file, deserializes, and initializes worker with loaded state |
+| `newGame(params)` | Renderer → Main → Worker | Start a new game with Shard ID and Dispersal Vector |
+
 ---
 
 ## Remote System Simulation
