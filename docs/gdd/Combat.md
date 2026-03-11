@@ -67,7 +67,7 @@ MOS uses three distinct attack vectors, escalating in cost, commitment, and perm
 
 ## Remote System Combat
 
-Once an attack is in progress at a remote system, the player cannot intervene directly. The Swarm executes its standing combat directives autonomously. The player watches the engagement unfold through delayed transmissions — the battle may already be over by the time they learn it started.
+Once an engagement is in progress at a remote system, the player cannot intervene directly. The Swarm executes its standing combat directives autonomously. The player watches the engagement unfold through delayed transmissions — if on defense, the battle may already be over by the time they learn it started. When attacking a MOS Core System, the player must prepare carefully and based on outdated info.
 
 The player's influence is entirely in the preparation:
 

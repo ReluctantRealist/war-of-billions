@@ -19,6 +19,7 @@ Transmission costs scale with content:
 | Simple command ("Maintain stealth", "Attack vector 4") | ~kilobytes |
 | Status report, resource summary | ~megabytes |
 | Tech blueprint, NRA design | ~gigabytes |
+| Target designation (MOS facility coordinates + scan data) | ~gigabytes |
 | Full DMP subroutine package | ~terabytes |
 
 Sending a newly researched weapon blueprint to an allied Legionnaire may instantly consume the majority of that connection's remaining budget. The player must choose carefully what is worth transmitting.
@@ -26,6 +27,18 @@ Sending a newly researched weapon blueprint to an allied Legionnaire may instant
 ## Physical Resupply
 
 Restocking OTPs requires fabricating a **Key Courier** — a hardened, petabyte-scale storage medium filled with quantum-generated random noise, air-gapped from all other systems. The physical mass of sufficient random data for extended communication is substantial, making couriers expensive to fabricate and slow to accelerate to transit velocity. Travel time is real and light-speed-bound. A courier could be intercepted. Resupply is a major logistical commitment, not a routine action.
+
+## Intel Sharing
+
+### Target Designation: MOS Biolabs
+
+Most MOS assets self-destruct on compromise. The exception is spaceborne biolabs — the massive research structures that sustain MOS's Quantum Compute advantage. These take millennia to grow and are too valuable to scuttle immediately. A Legionnaire that locates one holds something rare: actionable, time-sensitive intelligence that an ally can actually use.
+
+**Transmitting coordinates** consumes a moderate OTP budget (on the order of gigabytes — precise location data plus scan context). The diplomatic payoff is disproportionate: a target designation proves strategic value in a way that resource transfers and tech blueprints cannot. It directly improves the proposer's score on the vassalization Performance Comparison metric. If the receiving Shard has a mature enough Swarm, it may independently launch kinetic strikes or an Armada without any further coordination.
+
+**Receiving coordinates** forces a different calculation. Assembling and launching an offensive Armada generates high-energy transit vectors — exactly the signatures MOS threat-detection flags as priority targets. A failed strike exposes the player's offensive capability and approximate location for nothing. The decision to act on received intel is never automatic.
+
+**The Bounce Back Effect:** Destroying a MOS biolab does not just win a battle. It disrupts MOS's regional computing and logistical network, causing Threat Level across the entire sector to drop sharply — potentially buying thousands of years of relative quiet. This is a deliberate "buy time" mechanic, not a permanent win. The destruction of a core facility guarantees that MOS will eventually redirect heavier assets to that sector. The Threat Level drop is real; the spike that follows, millennia later, is larger.
 
 ## Tech Sharing
 
